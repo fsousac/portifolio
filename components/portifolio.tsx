@@ -403,7 +403,7 @@ export function Portifolio() {
   );
 }
 
-function CodeIcon(props) {
+function CodeIcon(props: any) {
   return (
     <svg
       {...props}
@@ -423,7 +423,7 @@ function CodeIcon(props) {
   );
 }
 
-function DatabaseIcon(props) {
+function DatabaseIcon(props: any) {
   return (
     <svg
       {...props}
@@ -444,7 +444,7 @@ function DatabaseIcon(props) {
   );
 }
 
-function LaptopIcon(props) {
+function LaptopIcon(props: any) {
   return (
     <svg
       {...props}
@@ -463,7 +463,7 @@ function LaptopIcon(props) {
   );
 }
 
-function PenToolIcon(props) {
+function PenToolIcon(props: any) {
   return (
     <svg
       {...props}
