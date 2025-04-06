@@ -56,21 +56,21 @@ export function Portifolio() {
             {isPortuguese ? "In\u00EDcio" : "Home"}
           </Link>
           <Link
-            href="#"
+            href="#projects"
             className="text-sm font-medium hover:underline underline-offset-4"
             prefetch={false}
           >
             {isPortuguese ? "Projetos" : "Projects"}
           </Link>
           <Link
-            href="#"
+            href="#skills"
             className="text-sm font-medium hover:underline underline-offset-4"
             prefetch={false}
           >
             {isPortuguese ? "Habilidades" : "Skills"}
           </Link>
           <Link
-            href="#"
+            href="#contact"
             className="text-sm font-medium hover:underline underline-offset-4"
             prefetch={false}
           >
@@ -92,21 +92,22 @@ export function Portifolio() {
                   </h1>
                   <h2 className="text-xl font-semibold text-muted-foreground">
                     {isPortuguese
-                      ? "Desenvolvedor Full-Stack"
-                      : "Full-Stack Developer"}
+                      ? "Desenvolvedor Full-Stack | QA (Quality Assurance)"
+                      : "Full-Stack Developer | QA (Quality Assurance)"}
                   </h2>
-                  <p className="max-w-[600px] text-muted-foreground md:text-xl">
+                  <p className="max-w-[600px] text-muted-foreground md:text-l">
                     {isPortuguese
-                      ? "Sou um desenvolvedor full-stack apaixonado, com expertise em construir aplica\u00E7\u00F5es web modernas, escal\u00E1veis e amig\u00E1veis ao usu\u00E1rio. Adoro criar solu\u00E7\u00F5es inovadoras que resolvem problemas do mundo real."
-                      : "I'm a passionate full-stack developer with expertise in building modern, scalable, and user-friendly web applications. I love to create innovative solutions that solve real-world problems."}
+                      ? "Engenheiro de Software com experiência prática em desenvolvimento Full-Stack e garantia de qualidade de software. Minha trajetória combina a construção de sistemas escaláveis com um olhar crítico para testes automatizados, CI/CD e otimização de processos. Tenho paixão por resolver problemas técnicos complexos, sempre buscando equilibrar inovação, performance e impacto real para usuários e clientes."
+                      : "Software Engineer with hands-on experience in Full-Stack development and software quality assurance. My journey combines building scalable systems with a critical eye for automated testing, CI/CD, and process optimization. I'm passionate about solving complex technical problems, always striving to balance innovation, performance, and real impact for users and clients."}
                   </p>
                 </div>
               </div>
               <img
-                src="/next.svg"
+                src="/profile.png"
                 width="550"
                 height="550"
                 alt={"profile"}
+                draggable="false"
                 className="mx-auto aspect-square overflow-hidden rounded-xl object-cover sm:w-full lg:order-last"
               />
             </div>
@@ -124,8 +125,8 @@ export function Portifolio() {
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   {isPortuguese
-                    ? "Confira alguns dos meus projetos recentes que mostram minhas habilidades de desenvolvimento full-stack."
-                    : "Check out some of my recent projects that showcase my full-stack development skills."}
+                    ? "Confira alguns dos meus projetos recentes."
+                    : "Check out some of my recent projects."}
                 </p>
               </div>
             </div>
@@ -134,78 +135,122 @@ export function Portifolio() {
                 <Card>
                   <CardHeader>
                     <img
-                      src="/placeholder.svg"
+                      src="/pesquisa-integrada.png"
                       width="550"
                       height="310"
-                      alt={isPortuguese ? "Projeto 1" : "Project 1"}
+                      alt={
+                        isPortuguese
+                          ? "Sistema de Pesquisa Integrada do TCU"
+                          : "Integrated Search System"
+                      }
+                      draggable="false"
                       className="mx-auto aspect-video overflow-hidden rounded-t-xl object-cover object-center"
                     />
                   </CardHeader>
                   <CardContent className="space-y-2">
                     <div>
                       <h3 className="text-xl font-bold">
-                        {isPortuguese ? "Projeto 1" : "Project 1"}
+                        {isPortuguese
+                          ? "Sistema de Pesquisa Integrada (TCU)"
+                          : "Integrated Search System (TCU)"}
                       </h3>
                       <p className="text-muted-foreground">
                         {isPortuguese
-                          ? "Uma aplica\u00E7\u00E3o web full-stack que permite aos usu\u00E1rios gerenciar suas tarefas e projetos."
-                          : "A full-stack web application that allows users to manage their tasks and projects."}
+                          ? "Desenvolvimento do sistema de Pesquisa Textual utilizando Java, Spring Framework e Kotlin. Implementação de testes unitários com JUnit para garantir 95%+ de cobertura de código. Integração de frontend com Angular e otimização de pipelines CI/CD usando Docker, Kubernetes e Jenkins. Colaboração em equipe ágil com práticas de Scrum e revisões de código. Implementação e uso de search engines como Elasticsearch e Solr, além da integração dos sistemas com bases Oracle e PostgreSQL."
+                          : "Development of the Text Search system using Java, Spring Framework, and Kotlin. Implementation of unit tests with JUnit to ensure 95%+ code coverage. Frontend integration with Angular and CI/CD pipeline optimization using Docker, Kubernetes, and Jenkins. Team collaboration in an agile environment with Scrum practices and code reviews. Implementation and use of search engines such as Elasticsearch and Solr, as well as system integration with Oracle and PostgreSQL databases."}
                       </p>
+                    </div>
+                    <div className="flex gap-2 flex-wrap">
+                      <Badge>Java</Badge>
+                      <Badge>Spring Boot</Badge>
+                      <Badge>Kotlin</Badge>
+                      <Badge>Angular</Badge>
+                      <Badge>JUnit</Badge>
+                      <Badge>SonarQube</Badge>
+                      <Badge>Sentry</Badge>
+                      <Badge>Docker</Badge>
+                      <Badge>Kubernetes</Badge>
+                      <Badge>Jenkins</Badge>
+                      <Badge>Kanban</Badge>
+                      <Badge>Scrum</Badge>
+                      <Badge>Elasticsearch</Badge>
+                      <Badge>Solr</Badge>
+                      <Badge>Oracle</Badge>
+                      <Badge>PostgreSQL</Badge>
                     </div>
                     <div className="flex gap-2">
                       <Link
-                        href="#"
+                        href="https://pesquisa.apps.tcu.gov.br/pesquisa/integrada"
+                        target="_blank"
                         className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                         prefetch={false}
                       >
-                        {isPortuguese ? "Demo ao Vivo" : "Live Demo"}
+                        {isPortuguese ? "Preview" : "Preview"}
                       </Link>
-                      <Link
+                      {/* <Link
                         href="#"
                         className="inline-flex h-8 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                         prefetch={false}
                       >
                         GitHub
-                      </Link>
+                      </Link> */}
                     </div>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardHeader>
                     <img
-                      src="/placeholder.svg"
+                      src="/santander-devweek.png"
                       width="550"
                       height="310"
-                      alt={isPortuguese ? "Projeto 2" : "Project 2"}
+                      alt={
+                        isPortuguese
+                          ? "API RESTful Santander DevWeek 2023"
+                          : "RESTful API Santander DevWeek 2023"
+                      }
+                      draggable="false"
                       className="mx-auto aspect-video overflow-hidden rounded-t-xl object-cover object-center"
                     />
                   </CardHeader>
                   <CardContent className="space-y-2">
                     <div>
                       <h3 className="text-xl font-bold">
-                        {isPortuguese ? "Projeto 2" : "Project 2"}
+                        {isPortuguese
+                          ? "API RESTful Santander DevWeek 2023"
+                          : "RESTful API Santander DevWeek 2023"}
                       </h3>
                       <p className="text-muted-foreground">
                         {isPortuguese
-                          ? "Um site de com\u00E9rcio eletr\u00F4nico responsivo com uma interface de usu\u00E1rio moderna e intuitiva."
-                          : "A responsive e-commerce website with a modern and intuitive user interface."}
+                          ? "Desenvolvimento de uma API bancária simulando transações financeiras. Implementação de autenticação JWT com Spring Security. Utilização de Spring Data JPA para operações CRUD e transações ACID. Configuração de ambiente containerizado com Docker para PostgreSQL e aplicação Spring Boot."
+                          : "Development of a banking API simulating financial transactions. Implementation of JWT authentication with Spring Security. Use of Spring Data JPA for CRUD operations and ACID transactions. Containerized environment setup with Docker for PostgreSQL and the Spring Boot application."}
                       </p>
+                    </div>
+                    <div className="flex gap-2 flex-wrap">
+                      <Badge>Java</Badge>
+                      <Badge>JWT</Badge>
+                      <Badge>Spring Security</Badge>
+                      <Badge>Spring Data JPA</Badge>
+                      <Badge>Spring Boot</Badge>
+                      <Badge>Docker</Badge>
+                      <Badge>REST</Badge>
                     </div>
                     <div className="flex gap-2">
                       <Link
-                        href="#"
+                        href="https://github.com/fsousac/santader-dev-week-2023"
+                        target="_blank"
                         className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                        prefetch={false}
-                      >
-                        {isPortuguese ? "Demo ao Vivo" : "Live Demo"}
-                      </Link>
-                      <Link
-                        href="#"
-                        className="inline-flex h-8 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                         prefetch={false}
                       >
                         GitHub
                       </Link>
+                      {/* <Link
+                        href="https://github.com/fsousac/santader-dev-week-2023"
+                        target="_blank"
+                        className="inline-flex h-8 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                        prefetch={false}
+                      >
+                        GitHub
+                      </Link> */}
                     </div>
                   </CardContent>
                 </Card>
@@ -214,39 +259,115 @@ export function Portifolio() {
                 <Card>
                   <CardHeader>
                     <img
-                      src="/placeholder.svg"
+                      src="/picpay.png"
                       width="550"
                       height="310"
-                      alt={isPortuguese ? "Projeto 3" : "Project 3"}
+                      alt={
+                        isPortuguese
+                          ? "Code Challenge Picpay Simplificado"
+                          : "Code Challenge Simplified Picpay"
+                      }
                       className="mx-auto aspect-video overflow-hidden rounded-t-xl object-cover object-center"
+                      draggable="false"
                     />
                   </CardHeader>
                   <CardContent className="space-y-2">
                     <div>
                       <h3 className="text-xl font-bold">
-                        {isPortuguese ? "Projeto 3" : "Project 3"}
+                        {isPortuguese
+                          ? "Code Challenge Picpay Simplificado"
+                          : "Code Challenge Simplified Picpay"}
                       </h3>
                       <p className="text-muted-foreground">
                         {isPortuguese
-                          ? "Uma aplica\u00E7\u00E3o de bate-papo em tempo real com recursos como indicadores de digita\u00E7\u00E3o, confirma\u00E7\u00E3o de leitura e compartilhamento de arquivos."
-                          : "A real-time chat application with features like typing indicators, read receipts, and file sharing."}
+                          ? "API para transferências entre usuários com autenticação básica. Resolução de concorrência em transações com @Transactional e locks otimistas. Testes de carga com JMeter para suportar 500+ transações simultâneas. Sistema escalável utilizado como case de estudo em entrevistas técnicas."
+                          : "API for user-to-user transfers with basic authentication. Concurrency resolution in transactions using @Transactional and optimistic locking. Load testing with JMeter to support 500+ simultaneous transactions. Scalable system used as a case study in technical interviews."}
                       </p>
+                    </div>
+                    <div className="flex gap-2 flex-wrap">
+                      <Badge>Java</Badge>
+                      <Badge>Spring Boot</Badge>
+                      <Badge>Spring Security</Badge>
+                      <Badge>Hibernate</Badge>
+                      <Badge>MySQL</Badge>
+                      <Badge>JMeter</Badge>
+                      <Badge>REST</Badge>
                     </div>
                     <div className="flex gap-2">
                       <Link
-                        href="#"
+                        href="https://github.com/fsousac/picpay-code-challenge"
+                        target="_blank"
                         className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                         prefetch={false}
                       >
-                        {isPortuguese ? "Demo ao Vivo" : "Live Demo"}
+                        GitHub
                       </Link>
-                      <Link
+                      {/* <Link
                         href="#"
                         className="inline-flex h-8 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                         prefetch={false}
                       >
                         GitHub
+                      </Link> */}
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardHeader>
+                    <img
+                      src="chicoliro.png"
+                      width="550"
+                      height="310"
+                      alt={
+                        isPortuguese
+                          ? "Robô Seguidor de Linha com Monitoramento em Tempo Real (UnB)"
+                          : "Line Follower Robot with Real-Time Monitoring (UnB)"
+                      }
+                      className="mx-auto aspect-video overflow-hidden rounded-t-xl object-cover object-center"
+                      draggable="false"
+                    />
+                  </CardHeader>
+                  <CardContent className="space-y-2">
+                    <div>
+                      <h3 className="text-xl font-bold">
+                        {isPortuguese
+                          ? "Robô Seguidor de Linha com Monitoramento em Tempo Real (UnB)"
+                          : "Line Follower Robot with Real-Time Monitoring (Unb)"}
+                      </h3>
+                      <p className="text-muted-foreground">
+                        {isPortuguese
+                          ? "Desenvolvimento de sistema integrado para controle e monitoramento de robô autônomo. API em Nest.js processando 50+ requisições/segundo e armazenamento em MongoDB. Comunicação bidirecional via WebSocket com frontend em Angular para atualizações em <100ms. 85% de cobertura de testes (Jest, Karma) e redução de 40% no consumo de energia."
+                          : "Development of an integrated system for autonomous robot control and monitoring. Nest.js API handling 50+ requests per second with data stored in MongoDB. Bidirectional communication via WebSocket with an Angular frontend for updates in under 100ms. Achieved 85% test coverage (Jest, Karma) and reduced energy consumption by 40%."}
+                      </p>
+                    </div>
+                    <div className="flex gap-2 flex-wrap">
+                      <Badge>Angular</Badge>
+                      <Badge>TypeScript</Badge>
+                      <Badge>Nest.js</Badge>
+                      <Badge>C++</Badge>
+                      <Badge>Arduino</Badge>
+                      <Badge>MongoDB</Badge>
+                      <Badge>WebSocket</Badge>
+                      <Badge>Jest</Badge>
+                      <Badge>Selenium</Badge>
+                      <Badge>Karma</Badge>
+                    </div>
+                    <div className="flex gap-2">
+                      <Link
+                        href="https://github.com/orgs/pi1-2024-ChicoLiro/repositories"
+                        target="_blank"
+                        className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                        prefetch={false}
+                      >
+                        GitHub
                       </Link>
+                      {/* <Link
+                        href="#"
+                        className="inline-flex h-8 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                        prefetch={false}
+                      >
+                        GitHub
+                      </Link> */}
                     </div>
                   </CardContent>
                 </Card>
