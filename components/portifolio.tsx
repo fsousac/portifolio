@@ -534,19 +534,26 @@ export function Portifolio() {
                 </p>
               </div>
               <div className="mx-auto w-full max-w-sm space-y-2">
-                <form className="flex flex-col gap-4">
+                <form
+                  action="https://formspree.io/f/xqabperw"
+                  method="POST"
+                  className="flex flex-col gap-4"
+                >
                   <Input
                     type="text"
+                    name="name"
                     placeholder={isPortuguese ? "Nome" : "Name"}
                     className="max-w-lg flex-1"
                   />
                   <Input
                     type="email"
+                    name="email"
                     placeholder="Email"
                     className="max-w-lg flex-1"
                   />
                   <Textarea
                     placeholder={isPortuguese ? "Mensagem" : "Message"}
+                    name="message"
                     className="max-w-lg flex-1"
                   />
                   <Button type="submit">
