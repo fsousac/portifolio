@@ -302,13 +302,6 @@ export function Portifolio() {
                       >
                         GitHub
                       </Link>
-                      {/* <Link
-                        href="#"
-                        className="inline-flex h-8 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                        prefetch={false}
-                      >
-                        GitHub
-                      </Link> */}
                     </div>
                   </CardContent>
                 </Card>
@@ -361,13 +354,57 @@ export function Portifolio() {
                       >
                         GitHub
                       </Link>
-                      {/* <Link
-                        href="#"
-                        className="inline-flex h-8 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardHeader>
+                    <img
+                      src="/weshortten.png"
+                      width="550"
+                      height="310"
+                      alt={
+                        isPortuguese
+                          ? "WeShortten - Encurtador de URLs (Java/Spring Boot)"
+                          : "WeShortten - URL Shortener (Java/Spring Boot)"
+                      }
+                      className="mx-auto aspect-video overflow-hidden rounded-t-xl object-cover object-center"
+                      draggable="false"
+                    />
+                  </CardHeader>
+                  <CardContent className="space-y-2">
+                    <div>
+                      <h3 className="text-xl font-bold">
+                        {isPortuguese
+                          ? "WeShortten - Encurtador de URLs (Java/Spring Boot)"
+                          : "WeShortten - URL Shortener (Java/Spring Boot)"}
+                      </h3>
+                      <p className="text-muted-foreground">
+                        {isPortuguese
+                          ? "Encurtador de URLs com API RESTful, geração de códigos curtos, redirecionamento rápido e rastreamento de acessos (IP, user agent, timestamp). Deploy automatizado com Docker e Traefik."
+                          : "URL shortener with RESTful API, short code generation, fast redirection, and access tracking (IP, user agent, timestamp). Automated deploy with Docker and Traefik."}
+                      </p>
+                    </div>
+                    <div className="flex gap-2 flex-wrap">
+                      <Badge>Java</Badge>
+                      <Badge>Spring Boot</Badge>
+                      <Badge>PostgreSQL</Badge>
+                      <Badge>Docker</Badge>
+                      <Badge>Traefik</Badge>
+                      <Badge>JPA/Hibernate</Badge>
+                      <Badge>Lombok</Badge>
+                      <Badge>Gradle</Badge>
+                      <Badge>REST API</Badge>
+                    </div>
+                    <div className="flex gap-2">
+                      <Link
+                        href="https://github.com/fsousac/weshortten"
+                        target="_blank"
+                        className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                         prefetch={false}
                       >
                         GitHub
-                      </Link> */}
+                      </Link>
                     </div>
                   </CardContent>
                 </Card>
@@ -441,6 +478,7 @@ export function Portifolio() {
                     <Badge>PostgreSQL</Badge>
                     <Badge>MongoDB</Badge>
                     <Badge>Prisma</Badge>
+                    <Badge>SQL</Badge>
                     <Badge>PL/SQL</Badge>
                   </div>
                 </CardContent>
