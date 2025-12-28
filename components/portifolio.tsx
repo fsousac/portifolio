@@ -35,18 +35,6 @@ export function Portifolio() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <header className="px-4 lg:px-6 h-14 flex items-center">
-        <Link
-          href="#"
-          className="flex items-center justify-center"
-          prefetch={false}
-        >
-          <LaptopIcon className="h-6 w-6" />
-          <span className="sr-only">
-            {isPortuguese
-              ? "Portf\u00F3lio de Felipe de Sousa"
-              : "Felipe de Sousa's Portfolio"}
-          </span>
-        </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link
             href="#"
@@ -130,285 +118,382 @@ export function Portifolio() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-7xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
-              <div className="grid gap-4">
-                <Card>
-                  <CardHeader>
-                    <img
-                      src="/pesquisa-integrada.png"
-                      width="550"
-                      height="310"
-                      alt={
-                        isPortuguese
-                          ? "Sistema de Pesquisa Integrada do TCU"
-                          : "Integrated Search System"
-                      }
-                      draggable="false"
-                      className="mx-auto aspect-video overflow-hidden rounded-t-xl object-cover object-center"
-                    />
-                  </CardHeader>
-                  <CardContent className="space-y-2">
-                    <div>
-                      <h3 className="text-xl font-bold">
-                        {isPortuguese
-                          ? "Sistema de Pesquisa Integrada (TCU)"
-                          : "Integrated Search System (TCU)"}
-                      </h3>
-                      <p className="text-muted-foreground">
-                        {isPortuguese
-                          ? "Desenvolvimento do sistema de Pesquisa Textual utilizando Java, Spring Framework e Kotlin. Implementação de testes unitários com JUnit para garantir 95%+ de cobertura de código. Integração de frontend com Angular e otimização de pipelines CI/CD usando Docker, Kubernetes e Jenkins. Colaboração em equipe ágil com práticas de Scrum e revisões de código. Implementação e uso de search engines como Elasticsearch e Solr, além da integração dos sistemas com bases Oracle e PostgreSQL."
-                          : "Development of the Text Search system using Java, Spring Framework, and Kotlin. Implementation of unit tests with JUnit to ensure 95%+ code coverage. Frontend integration with Angular and CI/CD pipeline optimization using Docker, Kubernetes, and Jenkins. Team collaboration in an agile environment with Scrum practices and code reviews. Implementation and use of search engines such as Elasticsearch and Solr, as well as system integration with Oracle and PostgreSQL databases."}
-                      </p>
+            <div className="mx-auto grid max-w-7xl items-start gap-6 py-12 grid-cols-[repeat(auto-fit,minmax(360px,1fr))]">
+              <Card>
+                <CardHeader>
+                  <img
+                    src="/pesquisa-integrada.png"
+                    width="550"
+                    height="310"
+                    alt={
+                      isPortuguese
+                        ? "Sistema de Pesquisa Integrada do TCU"
+                        : "Integrated Search System"
+                    }
+                    draggable="false"
+                    className="mx-auto aspect-video overflow-hidden rounded-t-xl object-cover object-center"
+                  />
+                </CardHeader>
+                <CardContent className="space-y-2">
+                  <div>
+                    <h3 className="text-xl font-bold">
+                      {isPortuguese
+                        ? "Sistema de Pesquisa Integrada (TCU)"
+                        : "Integrated Search System (TCU)"}
+                    </h3>
+                    <p className="text-muted-foreground">
+                      {isPortuguese
+                        ? "Desenvolvimento do sistema de Pesquisa Textual utilizando Java, Spring Framework e Kotlin. Implementação de testes unitários com JUnit para garantir 95%+ de cobertura de código. Integração de frontend com Angular e otimização de pipelines CI/CD usando Docker, Kubernetes e Jenkins. Colaboração em equipe ágil com práticas de Scrum e revisões de código. Implementação e uso de search engines como Elasticsearch e Solr, além da integração dos sistemas com bases Oracle e PostgreSQL."
+                        : "Development of the Text Search system using Java, Spring Framework, and Kotlin. Implementation of unit tests with JUnit to ensure 95%+ code coverage. Frontend integration with Angular and CI/CD pipeline optimization using Docker, Kubernetes, and Jenkins. Team collaboration in an agile environment with Scrum practices and code reviews. Implementation and use of search engines such as Elasticsearch and Solr, as well as system integration with Oracle and PostgreSQL databases."}
+                    </p>
+                  </div>
+                  <div className="flex gap-2 flex-wrap">
+                    <Badge>Java</Badge>
+                    <Badge>Spring Framework</Badge>
+                    <Badge>Kotlin</Badge>
+                    <Badge>Angular</Badge>
+                    <Badge>JUnit</Badge>
+                    <Badge>SonarQube</Badge>
+                    <Badge>Sentry</Badge>
+                    <Badge>Docker</Badge>
+                    <Badge>Kubernetes</Badge>
+                    <Badge>Jenkins</Badge>
+                    <Badge>Kanban</Badge>
+                    <Badge>Scrum</Badge>
+                    <Badge>Elasticsearch</Badge>
+                    <Badge>Kafka</Badge>
+                    <Badge>Solr</Badge>
+                    <Badge>Oracle</Badge>
+                    <Badge>PostgreSQL</Badge>
+                  </div>
+                  <div className="flex gap-2">
+                    <Link
+                      href="https://pesquisa.apps.tcu.gov.br/pesquisa/integrada"
+                      target="_blank"
+                      className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                      prefetch={false}
+                    >
+                      {isPortuguese ? "Preview" : "Preview"}
+                    </Link>
+                    {/* <Link
+                      href="#"
+                      className="inline-flex h-8 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                      prefetch={false}
+                    >
+                      GitHub
+                    </Link> */}
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <img
+                    src="/skuba.png"
+                    width="550"
+                    height="310"
+                    alt={
+                      isPortuguese
+                        ? "Skuba - Sistema de Monitoramento Kubernetes - Spring Batch"
+                        : "Skuba - Kubernetes - Spring Batch Monitoring System"
+                    }
+                    draggable="false"
+                    className="mx-auto aspect-video overflow-hidden rounded-t-xl object-cover object-center"
+                  />
+                </CardHeader>
+                <CardContent className="space-y-2">
+                  <div>
+                    <h3 className="text-xl font-bold">
+                      {isPortuguese
+                        ? "Skuba - Sistema de Monitoramento Kubernetes - Spring Batch"
+                        : "Skuba: Kubernetes - Spring Batch Monitoring System"}
+                    </h3>
+                    <p className="text-muted-foreground">
+                      {isPortuguese
+                        ? "Sistema web para monitoramento e execução de processos batch em ambiente Kubernetes. Backend em Kotlin/Spring Boot centraliza dados a partir das tabelas de metadados do Spring Batch e expõe endpoints para acompanhamento e execução manual; frontend em React + TypeScript + Vite oferece dashboard, histórico e visão operacional."
+                        : "Web system for monitoring and executing batch processes in Kubernetes. A Kotlin/Spring Boot backend centralizes data from Spring Batch metadata tables and exposes endpoints for tracking and manual execution; a React + TypeScript + Vite frontend provides dashboards, history, and operational views."}
+                    </p>
+                  </div>
+                  <div className="flex gap-2 flex-wrap">
+                    <Badge>Kotlin</Badge>
+                    <Badge>Spring Boot</Badge>
+                    <Badge>Spring Batch</Badge>
+                    <Badge>Spring Cloud</Badge>
+                    <Badge>Kubernetes</Badge>
+                    <Badge>Kafka</Badge>
+                    <Badge>Docker</Badge>
+                    <Badge>React</Badge>
+                    <Badge>TypeScript</Badge>
+                    <Badge>Vite</Badge>
+                    <Badge>MUI</Badge>
+                    <Badge>CI/CD</Badge>
+                  </div>
+                  <div className="flex gap-2">
+                    <div className="inline-flex h-8 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
+                      (
+                      {isPortuguese
+                        ? "Sistema Interno, sem visualização externa"
+                        : "Internal system, no external visualization"}
+                      )
                     </div>
-                    <div className="flex gap-2 flex-wrap">
-                      <Badge>Java</Badge>
-                      <Badge>Spring Boot</Badge>
-                      <Badge>Kotlin</Badge>
-                      <Badge>Angular</Badge>
-                      <Badge>JUnit</Badge>
-                      <Badge>SonarQube</Badge>
-                      <Badge>Sentry</Badge>
-                      <Badge>Docker</Badge>
-                      <Badge>Kubernetes</Badge>
-                      <Badge>Jenkins</Badge>
-                      <Badge>Kanban</Badge>
-                      <Badge>Scrum</Badge>
-                      <Badge>Elasticsearch</Badge>
-                      <Badge>Solr</Badge>
-                      <Badge>Oracle</Badge>
-                      <Badge>PostgreSQL</Badge>
-                    </div>
-                    <div className="flex gap-2">
-                      <Link
-                        href="https://pesquisa.apps.tcu.gov.br/pesquisa/integrada"
-                        target="_blank"
-                        className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                        prefetch={false}
-                      >
-                        {isPortuguese ? "Preview" : "Preview"}
-                      </Link>
-                      {/* <Link
-                        href="#"
-                        className="inline-flex h-8 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                        prefetch={false}
-                      >
-                        GitHub
-                      </Link> */}
-                    </div>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader>
-                    <img
-                      src="/santander-devweek.png"
-                      width="550"
-                      height="310"
-                      alt={
-                        isPortuguese
-                          ? "API RESTful Santander DevWeek 2023"
-                          : "RESTful API Santander DevWeek 2023"
-                      }
-                      draggable="false"
-                      className="mx-auto aspect-video overflow-hidden rounded-t-xl object-cover object-center"
-                    />
-                  </CardHeader>
-                  <CardContent className="space-y-2">
-                    <div>
-                      <h3 className="text-xl font-bold">
-                        {isPortuguese
-                          ? "API RESTful Santander DevWeek 2023"
-                          : "RESTful API Santander DevWeek 2023"}
-                      </h3>
-                      <p className="text-muted-foreground">
-                        {isPortuguese
-                          ? "Desenvolvimento de uma API bancária simulando transações financeiras. Implementação de autenticação JWT com Spring Security. Utilização de Spring Data JPA para operações CRUD e transações ACID. Configuração de ambiente containerizado com Docker para PostgreSQL e aplicação Spring Boot."
-                          : "Development of a banking API simulating financial transactions. Implementation of JWT authentication with Spring Security. Use of Spring Data JPA for CRUD operations and ACID transactions. Containerized environment setup with Docker for PostgreSQL and the Spring Boot application."}
-                      </p>
-                    </div>
-                    <div className="flex gap-2 flex-wrap">
-                      <Badge>Java</Badge>
-                      <Badge>JWT</Badge>
-                      <Badge>Spring Security</Badge>
-                      <Badge>Spring Data JPA</Badge>
-                      <Badge>Spring Boot</Badge>
-                      <Badge>Docker</Badge>
-                      <Badge>REST</Badge>
-                    </div>
-                    <div className="flex gap-2">
-                      <Link
-                        href="https://github.com/fsousac/santader-dev-week-2023"
-                        target="_blank"
-                        className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                        prefetch={false}
-                      >
-                        GitHub
-                      </Link>
-                      {/* <Link
-                        href="https://github.com/fsousac/santader-dev-week-2023"
-                        target="_blank"
-                        className="inline-flex h-8 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                        prefetch={false}
-                      >
-                        GitHub
-                      </Link> */}
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-              <div className="grid gap-4">
-                <Card>
-                  <CardHeader>
-                    <img
-                      src="/picpay.png"
-                      width="550"
-                      height="310"
-                      alt={
-                        isPortuguese
-                          ? "Code Challenge Picpay Simplificado"
-                          : "Code Challenge Simplified Picpay"
-                      }
-                      className="mx-auto aspect-video overflow-hidden rounded-t-xl object-cover object-center"
-                      draggable="false"
-                    />
-                  </CardHeader>
-                  <CardContent className="space-y-2">
-                    <div>
-                      <h3 className="text-xl font-bold">
-                        {isPortuguese
-                          ? "Code Challenge Picpay Simplificado"
-                          : "Code Challenge Simplified Picpay"}
-                      </h3>
-                      <p className="text-muted-foreground">
-                        {isPortuguese
-                          ? "API para transferências entre usuários com autenticação básica. Resolução de concorrência em transações com @Transactional e locks otimistas. Testes de carga com JMeter para suportar 500+ transações simultâneas. Sistema escalável utilizado como case de estudo em entrevistas técnicas."
-                          : "API for user-to-user transfers with basic authentication. Concurrency resolution in transactions using @Transactional and optimistic locking. Load testing with JMeter to support 500+ simultaneous transactions. Scalable system used as a case study in technical interviews."}
-                      </p>
-                    </div>
-                    <div className="flex gap-2 flex-wrap">
-                      <Badge>Java</Badge>
-                      <Badge>Spring Boot</Badge>
-                      <Badge>Spring Security</Badge>
-                      <Badge>Hibernate</Badge>
-                      <Badge>MySQL</Badge>
-                      <Badge>JMeter</Badge>
-                      <Badge>REST</Badge>
-                    </div>
-                    <div className="flex gap-2">
-                      <Link
-                        href="https://github.com/fsousac/picpay-code-challenge"
-                        target="_blank"
-                        className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                        prefetch={false}
-                      >
-                        GitHub
-                      </Link>
-                    </div>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader>
-                    <img
-                      src="chicoliro.png"
-                      width="550"
-                      height="310"
-                      alt={
-                        isPortuguese
-                          ? "Robô Seguidor de Linha com Monitoramento em Tempo Real (UnB)"
-                          : "Line Follower Robot with Real-Time Monitoring (UnB)"
-                      }
-                      className="mx-auto aspect-video overflow-hidden rounded-t-xl object-cover object-center"
-                      draggable="false"
-                    />
-                  </CardHeader>
-                  <CardContent className="space-y-2">
-                    <div>
-                      <h3 className="text-xl font-bold">
-                        {isPortuguese
-                          ? "Robô Seguidor de Linha com Monitoramento em Tempo Real (UnB)"
-                          : "Line Follower Robot with Real-Time Monitoring (Unb)"}
-                      </h3>
-                      <p className="text-muted-foreground">
-                        {isPortuguese
-                          ? "Desenvolvimento de sistema integrado para controle e monitoramento de robô autônomo. API em Nest.js processando 50+ requisições/segundo e armazenamento em MongoDB. Comunicação bidirecional via WebSocket com frontend em Angular para atualizações em <100ms. 85% de cobertura de testes (Jest, Karma) e redução de 40% no consumo de energia."
-                          : "Development of an integrated system for autonomous robot control and monitoring. Nest.js API handling 50+ requests per second with data stored in MongoDB. Bidirectional communication via WebSocket with an Angular frontend for updates in under 100ms. Achieved 85% test coverage (Jest, Karma) and reduced energy consumption by 40%."}
-                      </p>
-                    </div>
-                    <div className="flex gap-2 flex-wrap">
-                      <Badge>Angular</Badge>
-                      <Badge>TypeScript</Badge>
-                      <Badge>Nest.js</Badge>
-                      <Badge>C++</Badge>
-                      <Badge>Arduino</Badge>
-                      <Badge>MongoDB</Badge>
-                      <Badge>WebSocket</Badge>
-                      <Badge>Jest</Badge>
-                      <Badge>Selenium</Badge>
-                      <Badge>Karma</Badge>
-                    </div>
-                    <div className="flex gap-2">
-                      <Link
-                        href="https://github.com/orgs/pi1-2024-ChicoLiro/repositories"
-                        target="_blank"
-                        className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                        prefetch={false}
-                      >
-                        GitHub
-                      </Link>
-                    </div>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader>
-                    <img
-                      src="/weshortten.png"
-                      width="550"
-                      height="310"
-                      alt={
-                        isPortuguese
-                          ? "WeShortten - Encurtador de URLs (Java/Spring Boot)"
-                          : "WeShortten - URL Shortener (Java/Spring Boot)"
-                      }
-                      className="mx-auto aspect-video overflow-hidden rounded-t-xl object-cover object-center"
-                      draggable="false"
-                    />
-                  </CardHeader>
-                  <CardContent className="space-y-2">
-                    <div>
-                      <h3 className="text-xl font-bold">
-                        {isPortuguese
-                          ? "WeShortten - Encurtador de URLs (Java/Spring Boot)"
-                          : "WeShortten - URL Shortener (Java/Spring Boot)"}
-                      </h3>
-                      <p className="text-muted-foreground">
-                        {isPortuguese
-                          ? "Encurtador de URLs com API RESTful, geração de códigos curtos, redirecionamento rápido e rastreamento de acessos (IP, user agent, timestamp). Deploy automatizado com Docker e Traefik."
-                          : "URL shortener with RESTful API, short code generation, fast redirection, and access tracking (IP, user agent, timestamp). Automated deploy with Docker and Traefik."}
-                      </p>
-                    </div>
-                    <div className="flex gap-2 flex-wrap">
-                      <Badge>Java</Badge>
-                      <Badge>Spring Boot</Badge>
-                      <Badge>PostgreSQL</Badge>
-                      <Badge>Docker</Badge>
-                      <Badge>Traefik</Badge>
-                      <Badge>JPA/Hibernate</Badge>
-                      <Badge>Lombok</Badge>
-                      <Badge>Gradle</Badge>
-                      <Badge>REST API</Badge>
-                    </div>
-                    <div className="flex gap-2">
-                      <Link
-                        href="https://github.com/fsousac/weshortten"
-                        target="_blank"
-                        className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                        prefetch={false}
-                      >
-                        GitHub
-                      </Link>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <img
+                    src="/gw6.png"
+                    width="550"
+                    height="310"
+                    alt={
+                      isPortuguese
+                        ? "Galaxy Watch6 ESP32 Remake - Sistema embarcado com ESP32, sensores e MQTT"
+                        : "Galaxy Watch6 ESP32 Remake - Embedded system with ESP32, sensors, and MQTT"
+                    }
+                    draggable="false"
+                    className="mx-auto aspect-video overflow-hidden rounded-t-xl object-cover object-center"
+                  />
+                </CardHeader>
+                <CardContent className="space-y-2">
+                  <div>
+                    <h3 className="text-xl font-bold">
+                      {isPortuguese
+                        ? "Galaxy Watch6 ESP32 Remake"
+                        : "Galaxy Watch6 ESP32 Remake"}
+                    </h3>
+                    <p className="text-muted-foreground">
+                      {isPortuguese
+                        ? "Protótipo de sistema embarcado (UnB) que recria funcionalidades de um smartwatch moderno usando ESP32. Integra leituras em tempo real do sensor DHT11 (temperatura/umidade) e um sensor capacitivo KY-031 para interação do usuário, alternando modos e exibindo dados dinamicamente em um display OLED. Publica telemetria via MQTT para brokers (incluindo opções públicas) e integração com dashboards como o ThingsBoard, permitindo monitoramento remoto e visualizações configuráveis."
+                        : "Embedded systems prototype (UnB) that recreates modern smartwatch-like sensor features using an ESP32. It reads real-time data from a DHT11 sensor (temperature/humidity) and uses a KY-031 capacitive sensor for user interaction, switching modes and rendering sensor data dynamically on an OLED display. Telemetry is published over MQTT to brokers (including public options) and can be integrated with dashboards such as ThingsBoard for remote monitoring and configurable visualizations."}
+                    </p>
+                  </div>
+                  <div className="flex gap-2 flex-wrap">
+                    <Badge>ESP32</Badge>
+                    <Badge>C</Badge>
+                    <Badge>IoT</Badge>
+                    <Badge>MQTT</Badge>
+                    <Badge>ESP-IDF</Badge>
+                    <Badge>CMake</Badge>
+                    <Badge>ThingsBoard</Badge>
+                  </div>
+                  <div className="flex gap-2">
+                    <Link
+                      href="https://github.com/fsousac/GalaxyWatch6-ESP32-Remake"
+                      target="_blank"
+                      className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                      prefetch={false}
+                    >
+                      GitHub
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <img
+                    src="chicoliro.png"
+                    width="550"
+                    height="310"
+                    alt={
+                      isPortuguese
+                        ? "Robô Seguidor de Linha com Monitoramento em Tempo Real (UnB)"
+                        : "Line Follower Robot with Real-Time Monitoring (UnB)"
+                    }
+                    className="mx-auto aspect-video overflow-hidden rounded-t-xl object-cover object-center"
+                    draggable="false"
+                  />
+                </CardHeader>
+                <CardContent className="space-y-2">
+                  <div>
+                    <h3 className="text-xl font-bold">
+                      {isPortuguese
+                        ? "Robô Seguidor de Linha com Monitoramento em Tempo Real (UnB)"
+                        : "Line Follower Robot with Real-Time Monitoring (Unb)"}
+                    </h3>
+                    <p className="text-muted-foreground">
+                      {isPortuguese
+                        ? "Desenvolvimento de sistema integrado para controle e monitoramento de robô autônomo. API em Nest.js processando 50+ requisições/segundo e armazenamento em MongoDB. Comunicação bidirecional via WebSocket com frontend em Angular para atualizações em <100ms. 85% de cobertura de testes (Jest, Karma) e redução de 40% no consumo de energia."
+                        : "Development of an integrated system for autonomous robot control and monitoring. Nest.js API handling 50+ requests per second with data stored in MongoDB. Bidirectional communication via WebSocket with an Angular frontend for updates in under 100ms. Achieved 85% test coverage (Jest, Karma) and reduced energy consumption by 40%."}
+                    </p>
+                  </div>
+                  <div className="flex gap-2 flex-wrap">
+                    <Badge>Angular</Badge>
+                    <Badge>TypeScript</Badge>
+                    <Badge>Nest.js</Badge>
+                    <Badge>C++</Badge>
+                    <Badge>Arduino</Badge>
+                    <Badge>MongoDB</Badge>
+                    <Badge>WebSocket</Badge>
+                    <Badge>Jest</Badge>
+                    <Badge>Selenium</Badge>
+                    <Badge>Karma</Badge>
+                  </div>
+                  <div className="flex gap-2">
+                    <Link
+                      href="https://github.com/orgs/pi1-2024-ChicoLiro/repositories"
+                      target="_blank"
+                      className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                      prefetch={false}
+                    >
+                      GitHub
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <img
+                    src="/weshortten.png"
+                    width="550"
+                    height="310"
+                    alt={
+                      isPortuguese
+                        ? "WeShortten - Encurtador de URLs (Java/Spring Boot)"
+                        : "WeShortten - URL Shortener (Java/Spring Boot)"
+                    }
+                    className="mx-auto aspect-video overflow-hidden rounded-t-xl object-cover object-center"
+                    draggable="false"
+                  />
+                </CardHeader>
+                <CardContent className="space-y-2">
+                  <div>
+                    <h3 className="text-xl font-bold">
+                      {isPortuguese
+                        ? "WeShortten - Encurtador de URLs (Java/Spring Boot)"
+                        : "WeShortten - URL Shortener (Java/Spring Boot)"}
+                    </h3>
+                    <p className="text-muted-foreground">
+                      {isPortuguese
+                        ? "Encurtador de URLs com API RESTful, geração de códigos curtos, redirecionamento rápido e rastreamento de acessos (IP, user agent, timestamp). Deploy automatizado com Docker e Traefik."
+                        : "URL shortener with RESTful API, short code generation, fast redirection, and access tracking (IP, user agent, timestamp). Automated deploy with Docker and Traefik."}
+                    </p>
+                  </div>
+                  <div className="flex gap-2 flex-wrap">
+                    <Badge>Java</Badge>
+                    <Badge>Spring Boot</Badge>
+                    <Badge>PostgreSQL</Badge>
+                    <Badge>Docker</Badge>
+                    <Badge>Traefik</Badge>
+                    <Badge>JPA/Hibernate</Badge>
+                    <Badge>Lombok</Badge>
+                    <Badge>Gradle</Badge>
+                    <Badge>REST API</Badge>
+                  </div>
+                  <div className="flex gap-2">
+                    <Link
+                      href="https://github.com/fsousac/weshortten"
+                      target="_blank"
+                      className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                      prefetch={false}
+                    >
+                      GitHub
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <img
+                    src="/santander-devweek.png"
+                    width="550"
+                    height="310"
+                    alt={
+                      isPortuguese
+                        ? "API RESTful Santander DevWeek 2023"
+                        : "RESTful API Santander DevWeek 2023"
+                    }
+                    draggable="false"
+                    className="mx-auto aspect-video overflow-hidden rounded-t-xl object-cover object-center"
+                  />
+                </CardHeader>
+                <CardContent className="space-y-2">
+                  <div>
+                    <h3 className="text-xl font-bold">
+                      {isPortuguese
+                        ? "API RESTful Santander DevWeek 2023"
+                        : "RESTful API Santander DevWeek 2023"}
+                    </h3>
+                    <p className="text-muted-foreground">
+                      {isPortuguese
+                        ? "Desenvolvimento de uma API bancária simulando transações financeiras. Implementação de autenticação JWT com Spring Security. Utilização de Spring Data JPA para operações CRUD e transações ACID. Configuração de ambiente containerizado com Docker para PostgreSQL e aplicação Spring Boot."
+                        : "Development of a banking API simulating financial transactions. Implementation of JWT authentication with Spring Security. Use of Spring Data JPA for CRUD operations and ACID transactions. Containerized environment setup with Docker for PostgreSQL and the Spring Boot application."}
+                    </p>
+                  </div>
+                  <div className="flex gap-2 flex-wrap">
+                    <Badge>Java</Badge>
+                    <Badge>JWT</Badge>
+                    <Badge>Spring Security</Badge>
+                    <Badge>Spring Data JPA</Badge>
+                    <Badge>Spring Boot</Badge>
+                    <Badge>Docker</Badge>
+                    <Badge>REST</Badge>
+                  </div>
+                  <div className="flex gap-2">
+                    <Link
+                      href="https://github.com/fsousac/santader-dev-week-2023"
+                      target="_blank"
+                      className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                      prefetch={false}
+                    >
+                      GitHub
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <img
+                    src="/picpay.png"
+                    width="550"
+                    height="310"
+                    alt={
+                      isPortuguese
+                        ? "Code Challenge Picpay Simplificado"
+                        : "Code Challenge Simplified Picpay"
+                    }
+                    className="mx-auto aspect-video overflow-hidden rounded-t-xl object-cover object-center"
+                    draggable="false"
+                  />
+                </CardHeader>
+                <CardContent className="space-y-2">
+                  <div>
+                    <h3 className="text-xl font-bold">
+                      {isPortuguese
+                        ? "Code Challenge Picpay Simplificado"
+                        : "Code Challenge Simplified Picpay"}
+                    </h3>
+                    <p className="text-muted-foreground">
+                      {isPortuguese
+                        ? "API para transferências entre usuários com autenticação básica. Resolução de concorrência em transações com @Transactional e locks otimistas. Testes de carga com JMeter para suportar 500+ transações simultâneas. Sistema escalável utilizado como case de estudo em entrevistas técnicas."
+                        : "API for user-to-user transfers with basic authentication. Concurrency resolution in transactions using @Transactional and optimistic locking. Load testing with JMeter to support 500+ simultaneous transactions. Scalable system used as a case study in technical interviews."}
+                    </p>
+                  </div>
+                  <div className="flex gap-2 flex-wrap">
+                    <Badge>Java</Badge>
+                    <Badge>Spring Boot</Badge>
+                    <Badge>Spring Security</Badge>
+                    <Badge>Hibernate</Badge>
+                    <Badge>MySQL</Badge>
+                    <Badge>JMeter</Badge>
+                    <Badge>REST</Badge>
+                  </div>
+                  <div className="flex gap-2">
+                    <Link
+                      href="https://github.com/fsousac/picpay-code-challenge"
+                      target="_blank"
+                      className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                      prefetch={false}
+                    >
+                      GitHub
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
@@ -441,15 +526,16 @@ export function Portifolio() {
                       : "Proficient in HTML, CSS, JavaScript, React, and others modern front-end frameworks and libraries."}
                   </p>
                   <div className="flex gap-2 flex-wrap">
-                    <Badge>HTML</Badge>
-                    <Badge>CSS</Badge>
                     <Badge>JavaScript</Badge>
                     <Badge>TypeScript</Badge>
                     <Badge>React.js</Badge>
                     <Badge>Next.js</Badge>
                     <Badge>Angular</Badge>
                     <Badge>Vue</Badge>
-                    <Badge>Tailwind CSS</Badge>
+                    <Badge>HTML</Badge>
+                    <Badge>CSS</Badge>
+                    <Badge>SCSS</Badge>
+                    <Badge>Tailwind</Badge>
                   </div>
                 </CardContent>
               </Card>
@@ -463,23 +549,30 @@ export function Portifolio() {
                   </div>
                   <p className="text-muted-foreground">
                     {isPortuguese
-                      ? "Experiente em construir aplica\u00E7\u00F5es de servidor escal\u00E1veis e seguras usando Java, Python, Node.js e diversos frameworks em conjunto com bancos de dados SQL e NoSQL."
-                      : "Experienced in building scalable and secure server-side applications using Java, Python, Node.js and various frameworks in addition of databases SQL and NoSQL."}
+                      ? "Experiente em construir aplica\u00E7\u00F5es de servidor escal\u00E1veis e seguras usando Java, Kotlin, Python, Node.js e diversos frameworks em conjunto com bancos de dados SQL e NoSQL."
+                      : "Experienced in building scalable and secure server-side applications using Java, Kotlin, Python, Node.js and various frameworks in addition of databases SQL and NoSQL."}
                   </p>
                   <div className="flex gap-2 flex-wrap">
                     <Badge>Java</Badge>
+                    <Badge>Kotlin</Badge>
                     <Badge>Python</Badge>
                     <Badge>Node.js</Badge>
                     <Badge>C++</Badge>
                     <Badge>C</Badge>
                     <Badge>Spring Framework</Badge>
-                    <Badge>Django</Badge>
                     <Badge>Nest.js</Badge>
+                    <Badge>Django</Badge>
+                    <Badge>JWT</Badge>
                     <Badge>PostgreSQL</Badge>
+                    <Badge>Oracle</Badge>
+                    <Badge>ElasticSearch</Badge>
+                    <Badge>Solr</Badge>
                     <Badge>MongoDB</Badge>
                     <Badge>Prisma</Badge>
                     <Badge>SQL</Badge>
                     <Badge>PL/SQL</Badge>
+                    <Badge>MQTT</Badge>
+                    <Badge>Kafka</Badge>
                   </div>
                 </CardContent>
               </Card>
@@ -499,6 +592,10 @@ export function Portifolio() {
                   <div className="flex gap-2 flex-wrap">
                     <Badge>Git</Badge>
                     <Badge>GitHub</Badge>
+                    <Badge>AWS</Badge>
+                    <Badge>Azure Cloud</Badge>
+                    <Badge>Google Cloud</Badge>
+                    <Badge>Spring Cloud</Badge>
                     <Badge>Figma</Badge>
                     <Badge>Scrum</Badge>
                     <Badge>Kanban</Badge>
@@ -511,6 +608,7 @@ export function Portifolio() {
                     <Badge>Selenium</Badge>
                     <Badge>Docker</Badge>
                     <Badge>Kubernetes</Badge>
+                    <Badge>ESP-IDF</Badge>
                   </div>
                 </CardContent>
               </Card>
