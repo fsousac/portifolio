@@ -33,7 +33,7 @@ export function Portifolio() {
     setIsPortuguese((prevState) => !prevState);
   };
   return (
-    <div className="flex flex-col min-h-[100dvh]">
+    <div className="flex flex-col min-h-100dvh">
       <header className="px-4 lg:px-6 h-14 flex items-center">
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link
@@ -74,19 +74,19 @@ export function Portifolio() {
           <div className="px-4 md:px-6">
             <div className="grid md:gap-96 gap-6 lg:grid-cols-[1fr_400px] xl:grid-cols-[1fr_600px] max-w-fit mx-auto space-y-8 lg:space-y-0">
               <div className="flex flex-col justify-center items-center space-y-4 ">
-                <div className="space-y-2 max-w-[600px] text-center">
+                <div className="space-y-2 max-w-600px text-center">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                     {isPortuguese ? "Felipe de Sousa" : "Felipe de Sousa"}
                   </h1>
                   <h2 className="text-xl font-semibold text-muted-foreground">
                     {isPortuguese
-                      ? "Desenvolvedor Full-Stack | QA (Quality Assurance)"
-                      : "Full-Stack Developer | QA (Quality Assurance)"}
+                      ? "Backend Software Engineer | Java | Microsservi\u00E7os"
+                      : "Backend Software Engineer | Java | Microservices"}
                   </h2>
-                  <p className="max-w-[600px] text-muted-foreground md:text-l">
+                  <p className="max-w-600px text-muted-foreground md:text-l">
                     {isPortuguese
-                      ? "Engenheiro de Software com experiência prática em desenvolvimento Full-Stack e garantia de qualidade de software. Minha trajetória combina a construção de sistemas escaláveis com um olhar crítico para testes automatizados, CI/CD e otimização de processos. Tenho paixão por resolver problemas técnicos complexos, sempre buscando equilibrar inovação, performance e impacto real para usuários e clientes."
-                      : "Software Engineer with hands-on experience in Full-Stack development and software quality assurance. My journey combines building scalable systems with a critical eye for automated testing, CI/CD, and process optimization. I'm passionate about solving complex technical problems, always striving to balance innovation, performance, and real impact for users and clients."}
+                      ? "Desenvolvedor backend com foco em Java e arquitetura de microsservi\u00E7os, atuando atualmente em produtos globais da Michelin Connected Fleet (Sascar) em parceria com a Meta, com impacto em opera\u00E7\u00F5es nas Am\u00E9ricas e Europa. Trabalho com APIs REST, integra\u00E7\u00E3o entre servi\u00E7os, mensageria com Kafka e autentica\u00E7\u00E3o e autoriza\u00E7\u00E3o com Keycloak, aplicando OAuth2, OpenID Connect e JWT. No dia a dia, uso Spring Boot, PostgreSQL e OpenShift para evoluir solu\u00E7\u00F5es com foco em escalabilidade, resili\u00EAncia, seguran\u00E7a e confiabilidade operacional."
+                      : "Backend engineer focused on Java and microservices architecture, currently working on global Michelin Connected Fleet (Sascar) products in partnership with Meta, supporting operations across the Americas and Europe. I build REST APIs, service-to-service integrations, Kafka-based event flows, and authentication and authorization with Keycloak using OAuth2, OpenID Connect, and JWT. My day-to-day stack includes Spring Boot, PostgreSQL, and OpenShift to evolve solutions with a strong focus on scalability, resiliency, security, and operational reliability."}
                   </p>
                 </div>
               </div>
@@ -111,10 +111,10 @@ export function Portifolio() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   {isPortuguese ? "Projetos Destacados" : "Featured Projects"}
                 </h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-900px text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   {isPortuguese
-                    ? "Confira alguns dos meus projetos recentes."
-                    : "Check out some of my recent projects."}
+                    ? "Projetos que demonstram experi\u00EAncia em backend, integra\u00E7\u00E3o entre servi\u00E7os, seguran\u00E7a e sistemas distribu\u00EDdos."
+                    : "Projects that highlight backend engineering, service integration, security, and distributed systems experience."}
                 </p>
               </div>
             </div>
@@ -143,8 +143,8 @@ export function Portifolio() {
                     </h3>
                     <p className="text-muted-foreground">
                       {isPortuguese
-                        ? "Desenvolvimento do sistema de Pesquisa Textual utilizando Java, Spring Framework e Kotlin. Implementação de testes unitários com JUnit para garantir 95%+ de cobertura de código. Integração de frontend com Angular e otimização de pipelines CI/CD usando Docker, Kubernetes e Jenkins. Colaboração em equipe ágil com práticas de Scrum e revisões de código. Implementação e uso de search engines como Elasticsearch e Solr, além da integração dos sistemas com bases Oracle e PostgreSQL."
-                        : "Development of the Text Search system using Java, Spring Framework, and Kotlin. Implementation of unit tests with JUnit to ensure 95%+ code coverage. Frontend integration with Angular and CI/CD pipeline optimization using Docker, Kubernetes, and Jenkins. Team collaboration in an agile environment with Scrum practices and code reviews. Implementation and use of search engines such as Elasticsearch and Solr, as well as system integration with Oracle and PostgreSQL databases."}
+                        ? "Desenvolvimento do sistema de pesquisa textual utilizando Java, Spring Framework e Kotlin. Atua\u00E7\u00E3o em testes unit\u00E1rios, integra\u00E7\u00E3o com frontend Angular, otimiza\u00E7\u00E3o de pipelines CI/CD e uso de Elasticsearch, Solr, Oracle e PostgreSQL em ambiente corporativo de alta criticidade."
+                        : "Development of a text search platform using Java, Spring Framework, and Kotlin. Worked on unit tests, Angular frontend integration, CI/CD pipeline optimization, and search architecture with Elasticsearch, Solr, Oracle, and PostgreSQL in a high-criticality enterprise environment."}
                     </p>
                   </div>
                   <div className="flex gap-2 flex-wrap">
@@ -153,18 +153,11 @@ export function Portifolio() {
                     <Badge>Kotlin</Badge>
                     <Badge>Angular</Badge>
                     <Badge>JUnit</Badge>
-                    <Badge>SonarQube</Badge>
-                    <Badge>Sentry</Badge>
-                    <Badge>Docker</Badge>
-                    <Badge>Kubernetes</Badge>
-                    <Badge>Jenkins</Badge>
-                    <Badge>Kanban</Badge>
-                    <Badge>Scrum</Badge>
                     <Badge>Elasticsearch</Badge>
-                    <Badge>Kafka</Badge>
                     <Badge>Solr</Badge>
                     <Badge>Oracle</Badge>
                     <Badge>PostgreSQL</Badge>
+                    <Badge>CI/CD</Badge>
                   </div>
                   <div className="flex gap-2">
                     <Link
@@ -173,15 +166,8 @@ export function Portifolio() {
                       className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                     >
-                      {isPortuguese ? "Preview" : "Preview"}
+                      Preview
                     </Link>
-                    {/* <Link
-                      href="#"
-                      className="inline-flex h-8 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                      prefetch={false}
-                    >
-                      GitHub
-                    </Link> */}
                   </div>
                 </CardContent>
               </Card>
@@ -230,11 +216,111 @@ export function Portifolio() {
                   </div>
                   <div className="flex gap-2">
                     <div className="inline-flex h-8 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
-                      (
                       {isPortuguese
-                        ? "Sistema Interno, sem visualização externa"
-                        : "Internal system, no external visualization"}
-                      )
+                        ? "Projeto Corporativo"
+                        : "Corporative Project"}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <img
+                    src="/mcf.png"
+                    width="550"
+                    height="310"
+                    alt={
+                      isPortuguese
+                        ? "Gest\u00E3o de Frotas - Plataforma global Michelin Connected Fleet"
+                        : "Fleet Management - Michelin Connected Fleet global platform"
+                    }
+                    draggable="false"
+                    className="mx-auto aspect-video overflow-hidden rounded-t-xl object-cover object-center"
+                  />
+                </CardHeader>
+                <CardContent className="space-y-2">
+                  <div>
+                    <h3 className="text-xl font-bold">
+                      {isPortuguese
+                        ? "Michelin Connected Fleet - Gest\u00E3o de Frotas"
+                        : "Michelin Connected Fleet - Fleet Management"}
+                    </h3>
+                    <p className="text-muted-foreground">
+                      {isPortuguese
+                        ? "Atua\u00E7\u00E3o em plataforma global de gest\u00E3o de frotas em larga escala, com impacto em opera\u00E7\u00F5es nas Am\u00E9ricas e Europa. Contribui\u00E7\u00E3o em desenvolvimento backend, integra\u00E7\u00E3o entre servi\u00E7os, processamento orientado a eventos com Kafka e evolu\u00E7\u00E3o de solu\u00E7\u00F5es com foco em performance, escalabilidade e confiabilidade operacional."
+                        : "Worked on a global large-scale fleet management platform with impact across operations in the Americas and Europe. Contributed to backend development, service integration, Kafka-based event processing, and solution evolution focused on performance, scalability, and operational reliability."}
+                    </p>
+                  </div>
+                  <div className="flex gap-2 flex-wrap">
+                    <Badge>Java</Badge>
+                    <Badge>Spring Boot</Badge>
+                    <Badge>Kafka</Badge>
+                    <Badge>PostgreSQL</Badge>
+                    <Badge>OpenShift</Badge>
+                    <Badge>Kubernetes</Badge>
+                    <Badge>Event-Driven Architecture</Badge>
+                    <Badge>Service Integration</Badge>
+                    <Badge>Reliability</Badge>
+                  </div>
+                  <div className="flex gap-2">
+                    <Link
+                      href="https://connectedfleet.michelin.com/"
+                      target="_blank"
+                      className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                      prefetch={false}
+                    >
+                      Preview
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <img
+                    src="/mcf.png"
+                    width="550"
+                    height="310"
+                    alt={
+                      isPortuguese
+                        ? "Sasweb - Plataforma corporativa Michelin Connected Fleet"
+                        : "Sasweb - Michelin Connected Fleet corporate platform"
+                    }
+                    draggable="false"
+                    className="mx-auto aspect-video overflow-hidden rounded-t-xl object-cover object-center"
+                  />
+                </CardHeader>
+                <CardContent className="space-y-2">
+                  <div>
+                    <h3 className="text-xl font-bold">
+                      {isPortuguese
+                        ? "Sasweb - Plataforma corporativa Michelin Connected Fleet"
+                        : "Sasweb - Michelin Connected Fleet corporate platform"}
+                    </h3>
+                    <p className="text-muted-foreground">
+                      {isPortuguese
+                        ? "Projeto backend corporativo global com foco na evolu\u00E7\u00E3o de microsservi\u00E7os em Java e Spring Boot para a Michelin Connected Fleet (Sascar), suportando opera\u00E7\u00F5es nas Am\u00E9ricas e Europa. Atua\u00E7\u00E3o em APIs REST, integra\u00E7\u00E3o entre servi\u00E7os, autentica\u00E7\u00E3o e autoriza\u00E7\u00E3o com Keycloak e melhorias arquiteturais voltadas a resili\u00EAncia, seguran\u00E7a e escalabilidade."
+                        : "Global enterprise backend project focused on evolving Java and Spring Boot microservices for Michelin Connected Fleet (Sascar), supporting operations across the Americas and Europe. Worked on REST APIs, service integrations, authentication and authorization with Keycloak, and architecture improvements aimed at resiliency, security, and scalability."}
+                    </p>
+                  </div>
+                  <div className="flex gap-2 flex-wrap">
+                    <Badge>Java</Badge>
+                    <Badge>Java 21</Badge>
+                    <Badge>Spring Boot</Badge>
+                    <Badge>REST APIs</Badge>
+                    <Badge>Microservices</Badge>
+                    <Badge>Keycloak</Badge>
+                    <Badge>OAuth2</Badge>
+                    <Badge>OpenID Connect</Badge>
+                    <Badge>JWT</Badge>
+                    <Badge>PostgreSQL</Badge>
+                  </div>
+                  <div className="flex gap-2">
+                    <div className="inline-flex h-8 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
+                      {isPortuguese
+                        ? "Projeto Corporativo"
+                        : "Corporate Project"}
                     </div>
                   </div>
                 </CardContent>
@@ -504,14 +590,14 @@ export function Portifolio() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   {isPortuguese ? "Minhas Habilidades" : "My Skills"}
                 </h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-900px text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   {isPortuguese
                     ? "Tenho um conjunto diversificado de habilidades que me permitem construir aplica\u00E7\u00F5es web de alta qualidade, escal\u00E1veis e amig\u00E1veis ao usu\u00E1rio."
                     : "I have a diverse set of skills that allow me to build high-quality, scalable, and user-friendly web applications."}
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-start gap-6 py-12 lg:grid-cols-3 lg:gap-12">
+            <div className="mx-auto grid max-w-7xl items-start gap-6 py-12 md:grid-cols-2 xl:grid-cols-4 xl:gap-8">
               <Card>
                 <CardContent className="space-y-2">
                   <div className="flex items-center gap-2 pt-4">
@@ -522,35 +608,36 @@ export function Portifolio() {
                   </div>
                   <p className="text-muted-foreground">
                     {isPortuguese
-                      ? "Proficiente em HTML, CSS, JavaScript, React e outros frameworks e bibliotecas front-end modernas."
-                      : "Proficient in HTML, CSS, JavaScript, React, and others modern front-end frameworks and libraries."}
+                      ? "Experi\u00EAncia em interfaces web modernas, integra\u00E7\u00E3o com APIs e constru\u00E7\u00E3o de experi\u00EAncias consistentes para produtos corporativos."
+                      : "Experience building modern web interfaces, API integrations, and consistent user experiences for enterprise products."}
                   </p>
                   <div className="flex gap-2 flex-wrap">
                     <Badge>JavaScript</Badge>
                     <Badge>TypeScript</Badge>
-                    <Badge>React.js</Badge>
+                    <Badge>React</Badge>
                     <Badge>Next.js</Badge>
                     <Badge>Angular</Badge>
                     <Badge>Vue</Badge>
-                    <Badge>HTML</Badge>
-                    <Badge>CSS</Badge>
-                    <Badge>SCSS</Badge>
-                    <Badge>Tailwind</Badge>
+                    <Badge>HTML5</Badge>
+                    <Badge>CSS3</Badge>
+                    <Badge>Sass</Badge>
+                    <Badge>Tailwind CSS</Badge>
+                    <Badge>Vite</Badge>
                   </div>
                 </CardContent>
               </Card>
               <Card>
                 <CardContent className="space-y-2">
                   <div className="flex items-center gap-2 pt-4">
-                    <DatabaseIcon className="w-6 h-6 text-primary" />
+                    <LaptopIcon className="w-6 h-6 text-primary" />
                     <h3 className="text-xl font-bold">
                       {isPortuguese ? "Backend" : "Backend"}
                     </h3>
                   </div>
                   <p className="text-muted-foreground">
                     {isPortuguese
-                      ? "Experiente em construir aplica\u00E7\u00F5es de servidor escal\u00E1veis e seguras usando Java, Kotlin, Python, Node.js e diversos frameworks em conjunto com bancos de dados SQL e NoSQL."
-                      : "Experienced in building scalable and secure server-side applications using Java, Kotlin, Python, Node.js and various frameworks in addition of databases SQL and NoSQL."}
+                      ? "Desenvolvimento de servi\u00E7os backend e APIs com foco em microsservi\u00E7os, integra\u00E7\u00E3o entre servi\u00E7os e confiabilidade em produ\u00E7\u00E3o."
+                      : "Backend service and API development focused on microservices, service integration, and production reliability."}
                   </p>
                   <div className="flex gap-2 flex-wrap">
                     <Badge>Java</Badge>
@@ -560,19 +647,45 @@ export function Portifolio() {
                     <Badge>C++</Badge>
                     <Badge>C</Badge>
                     <Badge>Spring Framework</Badge>
-                    <Badge>Nest.js</Badge>
+                    <Badge>NestJS</Badge>
                     <Badge>Django</Badge>
+                    <Badge>Spring Security</Badge>
+                    <Badge>REST APIs</Badge>
+                    <Badge>Microservices</Badge>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent className="space-y-2">
+                  <div className="flex items-center gap-2 pt-4">
+                    <DatabaseIcon className="w-6 h-6 text-primary" />
+                    <h3 className="text-xl font-bold">
+                      {isPortuguese
+                        ? "Arquitetura e Dados"
+                        : "Architecture & Data"}
+                    </h3>
+                  </div>
+                  <p className="text-muted-foreground">
+                    {isPortuguese
+                      ? "Experi\u00EAncia com arquitetura orientada a eventos, autentica\u00E7\u00E3o corporativa, persist\u00EAncia relacional e mecanismos de busca."
+                      : "Experience with event-driven architecture, enterprise authentication, relational persistence, and search technologies."}
+                  </p>
+                  <div className="flex gap-2 flex-wrap">
+                    <Badge>Kafka</Badge>
+                    <Badge>Keycloak</Badge>
                     <Badge>JWT</Badge>
+                    <Badge>OAuth2</Badge>
+                    <Badge>OpenID Connect</Badge>
                     <Badge>PostgreSQL</Badge>
                     <Badge>Oracle</Badge>
-                    <Badge>ElasticSearch</Badge>
+                    <Badge>Elasticsearch</Badge>
                     <Badge>Solr</Badge>
                     <Badge>MongoDB</Badge>
                     <Badge>Prisma</Badge>
                     <Badge>SQL</Badge>
                     <Badge>PL/SQL</Badge>
                     <Badge>MQTT</Badge>
-                    <Badge>Kafka</Badge>
+                    <Badge>Event-Driven Architecture</Badge>
                   </div>
                 </CardContent>
               </Card>
@@ -581,13 +694,15 @@ export function Portifolio() {
                   <div className="flex items-center gap-2 pt-4">
                     <PenToolIcon className="w-6 h-6 text-primary" />
                     <h3 className="text-xl font-bold">
-                      {isPortuguese ? "Ferramentas" : "Tools"}
+                      {isPortuguese
+                        ? "Infraestrutura e Engenharia"
+                        : "Infrastructure & Engineering"}
                     </h3>
                   </div>
                   <p className="text-muted-foreground">
                     {isPortuguese
-                      ? "Proficiente no uso de diversas ferramentas e tecnologias para agilizar o processo de desenvolvimento e garantir c\u00F3digo de alta qualidade."
-                      : "Proficient in using various tools and technologies to streamline the development process and ensure high-quality code."}
+                      ? "Ferramentas e pr\u00E1ticas de entrega, qualidade, observabilidade e opera\u00E7\u00E3o para ambientes distribu\u00EDdos."
+                      : "Delivery, quality, observability, and operations practices for distributed environments."}
                   </p>
                   <div className="flex gap-2 flex-wrap">
                     <Badge>Git</Badge>
@@ -595,6 +710,9 @@ export function Portifolio() {
                     <Badge>AWS</Badge>
                     <Badge>Azure Cloud</Badge>
                     <Badge>Google Cloud</Badge>
+                    <Badge>Docker</Badge>
+                    <Badge>Kubernetes</Badge>
+                    <Badge>OpenShift</Badge>
                     <Badge>Spring Cloud</Badge>
                     <Badge>Figma</Badge>
                     <Badge>Scrum</Badge>
@@ -603,12 +721,13 @@ export function Portifolio() {
                     <Badge>TDD</Badge>
                     <Badge>JUnit</Badge>
                     <Badge>Jest</Badge>
-                    <Badge>SonarQube</Badge>
                     <Badge>Cypress</Badge>
                     <Badge>Selenium</Badge>
-                    <Badge>Docker</Badge>
-                    <Badge>Kubernetes</Badge>
-                    <Badge>ESP-IDF</Badge>
+                    <Badge>SonarQube</Badge>
+                    <Badge>Sentry</Badge>
+                    <Badge>Test Automation</Badge>
+                    <Badge>Observability</Badge>
+                    <Badge>CI/CD</Badge>
                   </div>
                 </CardContent>
               </Card>
@@ -625,7 +744,7 @@ export function Portifolio() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   {isPortuguese ? "Entre em Contato" : "Get in Touch"}
                 </h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-900px text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   {isPortuguese
                     ? "Tem um projeto em mente ou apenas quer dizer um oi? Preencha o formul\u00E1rio abaixo e entrarei em contato com voc\u00EA o assim que poss\u00EDvel."
                     : "Have a project in mind or just want to say hello? Fill out the form below and I'll get back to you as\n                  soon as possible."}

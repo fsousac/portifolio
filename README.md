@@ -14,6 +14,14 @@ pnpm dev
 bun dev
 ```
 
+To update the project dependencies to the latest available versions and regenerate the lockfile, run:
+
+```bash
+npm run update
+```
+
+This command updates the versions declared in `package.json`, reinstalls dependencies, and refreshes `package-lock.json`.
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
